@@ -7,10 +7,41 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #f96d00;
   text-decoration: none;
 }
 
+a:hover {
+  color: #f96d00;
+  text-decoration: underline;
+ }
+
 * {
   box-sizing: border-box;
+}
+
+p {
+  margin: 0 20px;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(220.55deg, #565656 0%, #181818 100%);
+  font-family: "Electrolize", sans-serif;
+  color: #dbd8e3;
+}
+
+.negroparaevaluar{
+  background-color: #262525;
+
+}
+
+.mt-32{
+margin-top: 32px;
 }
