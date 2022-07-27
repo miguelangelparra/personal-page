@@ -12,12 +12,46 @@ const multiLingualPage = {
   },
 };
 
-const multiLingualContact = {
-  es: {
-    titleContact: "CV",
-    youCanContact:
-      "Puedes escribirme por cualquiera de estos medios, apenas vea tu mensaje te constestaré",
-  },
+const multiLingualExperiencies = {
+  es: [
+    {
+      id: "es-004",
+      title: "Technical Owner - Team Lead",
+      company: "Accenture",
+      location: "Buenos Aires, Argentina",
+      time: "may. 2022 -> actualidad",
+      description: `Technical Owner. Enfocado en Arquitectura de Microservicios y Metodologías Ágiles. Aplicaciones dirigidas para uso interno y para uso público masivo.
+    Diseño, implementación, despliegue y mantenimiento de soluciones.
+    Liderazgo de equipo, definición y asignación de tareas. 
+    Con interés permanente en fomentar la comunicación interna y externa del equipo, incentivando la mejora continua a nivel personal y grupal. Fomentando de manera sostenida valores éticos para el trabajo y promotor permanente del estudio y la capacitación.`,
+    },
+    {
+      id: "es-003",
+      title: "Application Development Sr Analyst",
+      company: "Accenture",
+      location: "Buenos Aires, Argentina",
+      time: "jun. 2021 -> may. 2022",
+      description: `Full Stack Developer para cliente financiero enfocado en el desarrollo de Aplicaciones Web hechas con React.Js (Next.Js), Node.Js (Nest.Js) y MongoDB . Enfocado en arquitectura de microservicios y Metodologías Ágiles. Aplicaciones dirigidas para uso interno y para uso público masivo.
+      Diseño, implementación, despliegue y mantenimiento de soluciones.`,
+    },
+    {
+      id: "es-002",
+      title: "Application Development Analyst - Software Developer",
+      company: "Accenture",
+      location: "Buenos Aires, Argentina",
+      time: "nov. 2020 -> jun. 2021",
+      description: `Full Stack Developer para cliente financiero enfocado en el desarrollo de Aplicaciones Web hechas con React.JS y Node.JS con el uso de la lógica de consumo de microservicios y Metodologías Ágiles. Aplicaciones dirigidas para uso interno y para uso público masivo.
+      Diseño, implementación, despliegue y mantenimiento de soluciones.`,
+    },
+    {
+      id: "es-001",
+      title: "Application Development Associate - Software Developer",
+      company: "Accenture",
+      location: "Buenos Aires, Argentina",
+      time: "nov. 2019 -> nov. 2020",
+      description: `Full Stack Developer para cliente financiero de la República Argentina enfocado en el desarrollo de Aplicaciones Web hechas con React.JS y Node.JS con el uso de la lógica de consumo de microservicios y Metodologías Ágiles. Aplicaciones dirigidas para uso interno y para uso público masivo.`,
+    },
+  ],
   en: {
     titleContact: "Contact me",
     youCanContact:
@@ -37,40 +71,19 @@ const CVPage: NextPage = () => {
       </Head>
 
       <main className="main">
-        <h1 className="title">{multiLingualContact[languaje].titleContact}</h1>
+        <h1 className="title">{multiLingualPage[languaje].titlePage}</h1>
 
-     
-     
-     <div className="card">
-      <h4>Mi experiencia 1 </h4>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore excepturi impedit unde porro aspernatur consequuntur adipisci quae quaerat, nobis atque! Atque quo assumenda esse at reiciendis aliquid iste aut tempora!</p>
-     </div>
-
-     <div className="card">
-      <h4>Mi experiencia 1 </h4>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore excepturi impedit unde porro aspernatur consequuntur adipisci quae quaerat, nobis atque! Atque quo assumenda esse at reiciendis aliquid iste aut tempora!</p>
-     </div>
-
-     <div className="card">
-      <h4>Mi experiencia 1 </h4>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore excepturi impedit unde porro aspernatur consequuntur adipisci quae quaerat, nobis atque! Atque quo assumenda esse at reiciendis aliquid iste aut tempora!</p>
-     </div>
-
-     <div className="card">
-      <h4>Mi experiencia 1 </h4>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore excepturi impedit unde porro aspernatur consequuntur adipisci quae quaerat, nobis atque! Atque quo assumenda esse at reiciendis aliquid iste aut tempora!</p>
-     </div>
-
-     <div className="card">
-      <h4>Mi experiencia 1 </h4>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore excepturi impedit unde porro aspernatur consequuntur adipisci quae quaerat, nobis atque! Atque quo assumenda esse at reiciendis aliquid iste aut tempora!</p>
-     </div>
-
-     <div className="card">
-      <h4>Mi experiencia 1 </h4>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore excepturi impedit unde porro aspernatur consequuntur adipisci quae quaerat, nobis atque! Atque quo assumenda esse at reiciendis aliquid iste aut tempora!</p>
-     </div>
-
+        <section>
+          <h2>Experiencia</h2>
+          {multiLingualExperiencies[languaje].map((experience) => (
+            <div key={experience.id} className="card">
+              <h4>{experience.title}</h4>
+              <h5>{`${experience.company} | ${experience.location}`}</h5>
+              <h5>{experience.time}</h5>
+              <p>{experience.description}</p>
+            </div>
+          ))}
+        </section>
       </main>
     </div>
   );

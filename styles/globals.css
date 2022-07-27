@@ -6,6 +6,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+section{
+  margin: 50px;
+}
+
 a {
   color: #f96d00;
   text-decoration: none;
@@ -45,3 +49,4 @@ p {
 .mt-32{
 margin-top: 32px;
 }
+
