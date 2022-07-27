@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 
-
 const ANALYTICS_ID = process.env.NEXT_PUBLIC_ANALYTICS_ID
 
 function MyApp({ Component, pageProps }: AppProps) {
