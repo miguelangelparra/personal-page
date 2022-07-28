@@ -1,6 +1,6 @@
 import { List, Paper } from "@mui/material";
 import React from "react";
-import { EntryCard } from "./";
+// import { ExperienceCard } from "./";
 
 export const EntryList = () => {
   return (
@@ -14,7 +14,7 @@ export const EntryList = () => {
         }}
       >
         <List sx={{ opacity: 1 }}>
-          <EntryCard />
+          {/* <ExperienceCard /> */}
         </List>
       </Paper>
     </div>
