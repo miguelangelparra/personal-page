@@ -1,8 +1,13 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import Script from "next/script";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
 
-const ANALYTICS_ID = process.env.NEXT_PUBLIC_ANALYTICS_ID
+import Script from "next/script";
+import { darkTheme, lightTheme } from "../theme";
+import { UIProvider } from "../context/ui/UIProvider";
+
+const ANALYTICS_ID = process.env.NEXT_PUBLIC_ANALYTICS_ID;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -20,7 +25,12 @@ function MyApp({ Component, pageProps }: AppProps) {
          gtag('config', '${ANALYTICS_ID}');
         `}
       </Script>
-      <Component {...pageProps} />
+      <UIProvider>
+        <ThemeProvider theme={darkTheme}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </UIProvider>
     </>
   );
 }
