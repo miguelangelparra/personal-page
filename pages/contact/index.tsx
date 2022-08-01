@@ -18,7 +18,7 @@ const multiLingualContact = {
   es: {
     titleContact: "Contactame",
     youCanContact:
-      "Puedes escribirme por cualquiera de estos medios, apenas vea tu mensaje te constestaré",
+      "Puedes escribirme por cualquiera de estos medios, apenas vea tu mensaje te contestaré",
   },
   en: {
     titleContact: "Contact me",
