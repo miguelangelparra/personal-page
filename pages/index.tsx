@@ -47,7 +47,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Miguelangel Parra</title>
         <meta name="description" content="About Miguelangel Parra" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main>
