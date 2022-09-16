@@ -10,6 +10,9 @@ const languaje = "es";
 
 const multiLingualMenu = {
   es: {
+    pageInformation:{
+      content: 'Miguelangel Parra - Desarrollador de Software '
+    },
     iAm: "Soy Miguelangel Parra",
     softwareDeveloper: "Desarrollador de Software",
     aboutMe: "Sobre Mi",
@@ -17,6 +20,9 @@ const multiLingualMenu = {
     contact: "Contacto",
   },
   en: {
+    pageInformation:{
+      content: 'Miguelangel Parra - Software Developer '
+    },
     iAm: "I'm Miguelangel Parra",
     softwareDeveloper: "Software Developer",
     aboutMe: "About Me",
@@ -43,23 +49,15 @@ const Home: NextPage = () => {
   };
 
   return (
-    <Layout>
-      <Head>
-        <title>Miguelangel Parra</title>
-        <meta name="description" content="About Miguelangel Parra" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
-      <main>
+    <Layout content={multiLingualMenu[languaje].pageInformation.content}>
         <Grid
           container
-          spacing={0}
           sx={{ height: "calc(100vh - 100px)" }}
           alignItems="center"
           alignContent={"center"}
           textAlign="center"
         >
-          <Grid item xs={12} spacing={2} textAlign={"center"}>
+          <Grid item xs={12}  textAlign={"center"}>
             <Typography component="h1" variant="h3">
               {multiLingualMenu[languaje].iAm}
             </Typography>
@@ -86,7 +84,6 @@ const Home: NextPage = () => {
             </ButtonGroup>
           </Grid>
         </Grid>
-      </main>
     </Layout>
   );
 };
