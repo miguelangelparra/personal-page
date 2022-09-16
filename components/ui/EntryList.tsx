@@ -1,5 +1,5 @@
-import { List, Paper } from "@mui/material";
 import React from "react";
+import { List, Paper } from "@mui/material";
 // import { ExperienceCard } from "./";
 
 export const EntryList = () => {

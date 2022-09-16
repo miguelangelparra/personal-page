@@ -1,10 +1,8 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { Layout } from "../components/layouts/Layout";
-import { Button, ButtonGroup, Grid, Typography } from "@mui/material";
-import Link from "next/link";
 import { useRouter } from "next/router";
+import { Button, ButtonGroup, Grid, Typography } from "@mui/material";
+
+import { Layout } from "../components/layouts/Layout";
 
 const languaje = "es";
 

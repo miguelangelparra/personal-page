@@ -1,6 +1,5 @@
-import { Grid, Typography } from "@mui/material";
 import { NextPage } from "next";
-import Head from "next/head";
+import { Grid, Typography } from "@mui/material";
 import { Layout } from "../../components/layouts";
 
 const BlogPage: NextPage = () => {

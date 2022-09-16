@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { useRouter } from "next/router";
 import {
   Box,
   Divider,
@@ -11,9 +13,7 @@ import {
 import DescriptionIcon from '@mui/icons-material/Description';
 import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import { useContext } from "react";
 import { UIContext } from "../../context/ui";
-import { useRouter } from "next/router";
 
 interface MenuItem{
   text:string;

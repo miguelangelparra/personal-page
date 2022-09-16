@@ -1,6 +1,6 @@
-import { Grid, Typography } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Grid, Typography } from "@mui/material";
 import { Layout } from "../../components/layouts/Layout";
 import { ExperienceCard } from "../../components/ui/ExperienceCard";
 
